@@ -1,0 +1,54 @@
+<html>
+    -<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <head> 
+        <title>test html 1</title>
+    </head>
+    <body>
+        <h2>JavaScript 能做什么</h2>
+        <p id = "p1">Test 1</p>
+        <!--JavaScript 同时接受双引号和单引号：-->
+        <button type ="button" onclick='changeText("p1", "changed content")'>Click</button>
+        
+        <h2 id="H2">JavaScript 能够改变 HTML 属性</h2>
+        <button type ="button" onclick='document.getElementById("H2").style.color = "RED"'>RED</button>
+        <button type ="button" onclick='document.getElementById("H2").style.color = "BLACK"'>BLACK</button>
+
+        <h2 id="H3">JavaScript 能够隐藏 HTML 元素</h2>
+        <button type ="button" onclick='document.getElementById("H3").style.display = "none"'>Disapper</button>
+        <button type ="button" onclick='document.getElementById("H3").style.display = "block"'>apper</button>
+
+        <h2 id="H4"></h2>
+        <button type ="button" onclick='set_Html_Text("H4", "Changed Now")'>Change Text</button>
+
+        <button type="button" onclick="show_warn_msg('The window is to be freeze')">Show Warn</button>
+        <h2 id="H5"></h2>
+        <button type="button" onclick="document.getElementById('H5').innerHTML = getAConstant()">Show Constant</button>
+        
+        <button type="button" onclick="window.alert(alertPersonName())">Get A Person's Name</button>
+        <button type="button" onclick="laugh()">Let a person laugh</button>
+        <p></p>
+        <input id = "IN1" type="text" name="Please Input Something"></input>
+        <button onclick="showLengthOfString( document.getElementById('IN1').innerText)">Show length of string</button>
+        <p>
+            <button onclick="showSpecialChar()">Show special char</button>
+        </p>
+        <p>
+            <button onclick="array1.forEach(showArray)">Array Show</button>
+        </p>
+        <p>
+            <button onclick="showTotal()">Array TOtal</button>
+        </p>
+
+
+        <!--提示：把脚本置于 <body> 元素的底部，可改善显示速度，因为脚本编译会拖慢显示。-->
+            <script>
+                function changeText(p1_id, p2_string){
+                    document.getElementById(p1_id).innerHTML = p2_string;
+                }
+    
+            </script>
+            <script src="basicFunction.js"></script>
+
+    </body>
+</html>
